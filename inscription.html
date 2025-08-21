@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .split-container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .left-side {
+            flex: 1;
+            background: transparent; /* Fond transparent */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-circle {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: none;
+        }
+        .logo-circle img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #b0afbb;
+            background: transparent;
+        }
+        .right-side {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(40,17,211,0.08);
+            padding: 30px;
+        }
+        h2 {
+            text-align: center;
+            color: #2811d3;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 18px;
+            border: 1px solid #cccbd4;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            background: #2811d3;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1a0fa0;
+        }
+    </style>
+</head>
+<body>
+    <div class="split-container">
+        <div class="left-side">
+            <div class="logo-circle">
+                <img src="3.png" alt="Logo">
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="container">
+                <h2>Inscription</h2>
+                <form>
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" required>
+
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" required>
+
+                    <label for="date_naissance">Date de naissance</label>
+                    <input type="date" id="date_naissance" name="date_naissance" required>
+
+                    <label for="username">Nom d'utilisateur</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="sexe">Sexe</label>
+                    <select id="sexe" name="sexe" required>
+                        <option value="">Sélectionner</option>
+                        <option value="homme">Homme</option>
+                        <option value="femme">Femme</option>
+                    </select>
+
+                    <label for="adresse">Adresse</label>
+                    <input type="text" id="adresse" name="adresse" required>
+
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" required pattern="[0-9]{10,15}">
+
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <label for="confirm_password">Confirmer le mot de passe</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
